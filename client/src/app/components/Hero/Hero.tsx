@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
+  const t = useTranslations("Index");
   return (
     <>
       <div className={styles.hero}>
@@ -16,7 +18,7 @@ export default function Hero() {
               ullam maxime. Lorem ipsum dolor sit, amet consectetur adipisicing
               elit. Commodi, corrupti.
             </h4>
-            <button className={styles.btn}>Create Project</button>
+            <button className={styles.btn}>{t("title")}</button>
           </div>
         </div>
       </div>

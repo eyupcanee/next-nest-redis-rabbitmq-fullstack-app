@@ -1,8 +1,10 @@
 import styles from "./page.module.css";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
+import Header from "../components/Header/Header";
+import Hero from "../components/Hero/Hero";
+import { useTranslations } from "next-intl";
 
 export default function MainPage() {
+  const t = useTranslations("Index");
   return (
     <>
       <div className={styles.hero}>
