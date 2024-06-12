@@ -6,12 +6,17 @@ import { motion } from "framer-motion";
 export default function Header() {
   const [show, setShow] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-
+  const [scrolled, setScrolled] = useState(false);
   const controlNavbar = () => {
     if (window.scrollY > 250) {
       setShow(true);
     } else {
       setShow(false);
+    }
+    if (window.scrollY >= window.innerHeight) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
     }
 
     setLastScrollY(window.scrollY);
@@ -35,7 +40,7 @@ export default function Header() {
           y: 0,
           opacity: 1,
         }}
-        className={styles.header}
+        className={!scrolled ? styles.header : styles.header_sc}
       >
         <div className="container">
           <div className={styles.header_content}>
@@ -57,6 +62,8 @@ export default function Header() {
             </div>
           </div>
         </div>
+
+        <hr />
       </motion.header>
     </>
   );

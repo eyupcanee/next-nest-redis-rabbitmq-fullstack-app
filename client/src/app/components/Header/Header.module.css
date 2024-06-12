@@ -9,6 +9,23 @@
   border-radius: 0px 0px 50px 50px;
   backdrop-filter: blur(100px);
   z-index: 2000;
+  border-bottom: 2px solid #01a5cc;
+  transition: all 0.5s ease;
+}
+
+.header_sc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  border-radius: 0px 0px 50px 50px;
+  backdrop-filter: blur(100px);
+  z-index: 2000;
+  border-bottom: 2px solid #01a5cc;
+  transition: all 0.5s ease;
 }
 
 .header_content {
