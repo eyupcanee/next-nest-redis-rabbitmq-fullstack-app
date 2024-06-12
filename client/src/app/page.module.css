@@ -1,0 +1,54 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero video {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  object-fit: cover;
+  position: absolute;
+}
+
+.hero .hero_video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.hero .overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.navigation {
+  display: flex;
+
+  justify-content: center;
+  text-align: center;
+
+  width: 100%;
+  padding-bottom: 15px;
+  height: auto;
+  top: 0;
+  z-index: 2000;
+}
+
+.hero_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+}
